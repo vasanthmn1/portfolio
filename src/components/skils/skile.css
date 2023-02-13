@@ -1,0 +1,88 @@
+.progress {
+	background-color: #d8d8d8;
+	border-radius: 20px;
+	position: relative;
+	margin: 15px 0;
+	height: 20px;
+	width: 300px;
+}
+
+.progress-done {
+	background: linear-gradient(51deg, rgba(0,254,255,1) 3%, rgba(3,201,128,1) 91%);
+	box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
+	border-radius: 20px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 0;
+	opacity: 0;
+	transition: 1s ease 0.3s;
+}
+.progresspage{
+    /* width: 80%; */
+    display: flex;
+    /* justify-content: space-between; */
+}
+.progresspage img{
+    object-fit: cover;
+   /* width: 50px; */
+  
+}
+
+.bg-fro-back{
+   margin: 0px 20px !important;
+	padding:50px 30px;
+	
+background: rgba(255, 255, 255, 0.11);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.skill__title{
+	color: rgb(250, 250, 250);
+	/* border-bottom:1px solid #F2709C ; */
+	/* width: 20px; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative; 
+	
+}
+
+   .contatan_box{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+   }
+   /* +======================    MEDIA QUERies  Small         ================== */
+   
+   @media screen and (max-width:600px){
+	 .bg-fro-back {
+		padding-left: 20px;
+	 
+	  }
+	  .progress{
+	
+		width: 250px;
+	
+	  }
+	}
+
+	@media screen and (max-width:988px){
+		.contatan_box {
+			display: flex ;
+			align-items: center ;
+			justify-content: center ;
+		}
+	   }
+
+	   @media screen and (min-width:1400px){
+		.skill__container{
+			height: 100vh !important;
+			
+		}
+	   }

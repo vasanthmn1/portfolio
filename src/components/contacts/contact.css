@@ -1,0 +1,97 @@
+/* .container.contact__container {
+    width: 58%;
+    display: grid;
+    grid-template-columns: 30% 50%;
+    gap: 12%;
+   }
+   .contact__options{
+   display: flex;
+   flex-direction: column;
+   gap: 1.2rem;
+   }
+   .contact__option{
+       background: var(--color-bg-variant);
+       padding: 1.2rem;
+       border-radius: 1.2rem;
+       text-align: center;
+       border: 1px solid transparent;
+       transition:all 0.5s ease ;
+   }
+   .contact__option:hover{
+       background: transparent;
+       border-color: var(--color-primary-variant);
+   }
+   .contact__option a{
+       margin-top: 0.7rem;
+       display: inline-block;
+       font-size: 0.7rem;
+   }
+   .contact_icon{
+       font-size: 1.5rem;
+       margin-bottom: 0.5rem;
+   } */
+   
+   /*  Form */
+   
+   
+   form{
+       display: flex;
+       flex-direction: column;
+       gap: 1.2rem;
+   }
+   input,textarea{
+       width: 100%;
+       padding: 1.5rem;
+       border-radius: 0.5rem;
+       background: transparent;
+       border: 2px solid var(--color-bg);
+       resize: none;
+       color: #fff;
+   }
+
+.contact__container{
+    padding: 60px 30px !important;
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+ .btn-contact{
+    background-color: var(--color-bg);
+    padding: 10px 0px;
+    transition: all 0.5s ease;
+
+   }
+
+   .btn-contact:hover{
+  box-shadow: 5px 1px 21px -2px rgba(3, 201, 136, 0.67);
+   }
+   .contact__option{
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg);
+    margin-top: 0.7rem;
+    /* display: inline-block; */
+    font-size: 0.7rem;
+    margin-bottom: 20px;
+   }
+
+   .contact__detail{
+    color: #fff;
+   }
+
+   .contact__option:hover{
+    transition: all 0.9s ease;
+         color: var(--color-bg) !important;
+          background-color: #fff !important;
+   }
+   .contact_icon{
+    font-size:2rem ;
+   }
