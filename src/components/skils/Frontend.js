@@ -14,21 +14,21 @@ export const Frontend = () => {
     return (
         <div className='mt-4'>
             <div className='mb-4 d-flex '>
-                <img src={html} alt='html' />
+                <img src={html} alt='html' className='ms-3 ' />
                 <div className='ms-3'>
                     <Progress done="90" />
 
                 </div>
             </div>
             <div className='mb-4 d-flex'>
-                <img src={css} alt='css' />
+                <img src={css} alt='css' className='ms-3 ' />
                 <div className='ms-3'>
                     <Progress done="85" />
 
                 </div>
             </div>
             <div className='mb-4 d-flex'>
-                <img src={js} alt='js' />
+                <img src={js} alt='js' className='ms-3 ' />
                 <div className='ms-3'>
                     <Progress done="65" />
 
@@ -36,7 +36,7 @@ export const Frontend = () => {
             </div>
 
             <div className='mb-4 d-flex'>
-                <img src={bootstrap} alt='bootstrap' />
+                <img src={bootstrap} alt='bootstrap' className='ms-3 ' />
                 <div className='ms-3'>
                     <Progress done="95" />
 
@@ -45,7 +45,7 @@ export const Frontend = () => {
             </div>
 
             <div className='mb-4 d-flex'>
-                <img src={tailwindcss} alt='tailwindcss' />
+                <img src={tailwindcss} alt='tailwindcss' className='ms-3 ' />
                 <div className='ms-3'>
                     <Progress done="90" />
 
@@ -54,7 +54,7 @@ export const Frontend = () => {
             </div>
 
             <div className='mb-4 d-flex '>
-                <img src={react} alt='react' />
+                <img src={react} alt='react' className='ms-3 ' />
                 <div className='ms-3'>
                     <Progress done="85" />
 

@@ -7,21 +7,21 @@ export const Backend = () => {
     return (
         <div className='mt-4'>
             <div className='mb-4 d-flex  '>
-                <img src={nodejs} alt='nodejs' />
+                <img src={nodejs} alt='nodejs' className='ms-3 ' />
                 <div className='ms-3'>
                     <Progress done="40" />
 
                 </div>
             </div>
             <div className='mb-4 d-flex'>
-                <img src={express} alt="express" />
+                <img src={express} alt="express " className='ms-3 ' />
                 <div className='ms-3'>
                     <Progress done="50" />
 
                 </div>
             </div>
             <div className='mb-4 d-flex'>
-                <img src={mongoDb} alt="mongoDb" />
+                <img src={mongoDb} alt="mongoDb" className='ms-3 ' />
 
                 <div className='ms-3'>
                     <Progress done="70" />
