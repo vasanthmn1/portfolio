@@ -96,3 +96,15 @@
     font-size:2rem ;
    }
 
+   /* .toast-message {
+    background: rgb(255, 0, 0);
+    color: #fff;
+    font-size: 20px;
+    width: 34vw;
+    padding: 30px 20px;
+} */
+
+.fixed{
+  /* position: fixed; */
+  /* margin-top: 60px; */
+}

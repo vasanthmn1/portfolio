@@ -23,7 +23,7 @@ export const Contact = () => {
 
         e.target.reset()
         toast.success(' Send message success ', {
-            position: toast.POSITION.TOP_RIGHT
+            position: toast.POSITION.BOTTOM_RIGHT
         });
     }
     return (
@@ -31,6 +31,8 @@ export const Contact = () => {
 
             <h1 className='text-center'>Contact Me</h1>
             <div className='container contact__container'>
+
+
                 <div className='row'>
                     <div className='col-lg-4'>
                         <div className='contact__options'>
@@ -39,7 +41,7 @@ export const Contact = () => {
 
                                     <AiOutlineMail className='contact_icon' />
                                     <h4>Email</h4>
-                                    <h5>mnvasanthcode@gmail.com</h5>
+                                    <h5 style={{ fontSize: 15 }}>mnvasanthcode@gmail.com</h5>
 
                                 </article>
                             </a>
@@ -55,8 +57,9 @@ export const Contact = () => {
                     </div>
 
                     <div className='col-lg-8'>
-                        <ToastContainer />
+
                         <form action='' ref={form} onSubmit={sentEmail}>
+                            <ToastContainer className="fixed" />
                             <input type="text"
                                 placeholder='Your Name'
                                 name='name'
