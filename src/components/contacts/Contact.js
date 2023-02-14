@@ -59,7 +59,7 @@ export const Contact = () => {
                                 placeholder='Your Email'
                                 required />
                             <textarea type="text"
-                                name='massage'
+                                name='message'
                                 placeholder='message'
                                 required />
                             <button className=' btn-contact' type='submit'>Sumit</button>
