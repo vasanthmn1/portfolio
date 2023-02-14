@@ -41,7 +41,7 @@ export const Contact = () => {
                                 <article className='contact__option'>
 
                                     <AiOutlineWhatsApp className='contact_icon' />
-                                    <h4>Email</h4>
+                                    <h4>WhatsApp</h4>
                                     <h5>+919003259352</h5>
                                 </article>
                             </a>
