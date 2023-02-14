@@ -6,10 +6,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
 
 
+
 export const Contact = () => {
     const form = useRef()
-    // const [resut, setresut] = useState('')
-    // const notify = () => toast("Wow so easy!");
+
     const sentEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm('service_joixy47', 'template_lizzjdj', form.current, 'lsN6VBHxPzFNhYkam')
@@ -22,9 +22,9 @@ export const Contact = () => {
 
 
         e.target.reset()
-        toast.success(' Send message success ', {
-            position: toast.POSITION.BOTTOM_RIGHT
-        });
+        // toast.success(' Send message success ', {
+        //     position: toast.POSITION.TOP_RIGHT
+        // });
     }
     return (
         <div id='contact'>
@@ -59,7 +59,7 @@ export const Contact = () => {
                     <div className='col-lg-8'>
 
                         <form action='' ref={form} onSubmit={sentEmail}>
-                            <ToastContainer className="fixed" />
+
                             <input type="text"
                                 placeholder='Your Name'
                                 name='name'
@@ -73,9 +73,10 @@ export const Contact = () => {
                                 placeholder='message'
                                 required />
                             <button
-                                onClick={sentEmail}
+                                // onClick={sentEmail}
                                 className=' btn-contact' type='submit'
-                                disabled={sentEmail}
+                                onclick={() => {
+                                }}
                             >Sumit</button>
                         </form>
                     </div>

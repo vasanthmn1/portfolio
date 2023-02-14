@@ -108,3 +108,17 @@
   /* position: fixed; */
   /* margin-top: 60px; */
 }
+/* @media screen and (min-width:1400px){
+    .topContainer__container{
+        height: 100vh !important;
+    }
+    
+   
+   } */
+
+ @media screen and (max-width:985px){
+    .fixed{
+        margin-top:300px;
+        /* ma */
+    }
+   }
