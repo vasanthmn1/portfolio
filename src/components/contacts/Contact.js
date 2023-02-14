@@ -59,7 +59,7 @@ export const Contact = () => {
                     <div className='col-lg-8'>
 
                         <form action='' ref={form} onSubmit={sentEmail}>
-                            <ToastContainer className="fixed" />
+                            {/* <ToastContainer className="fixed" /> */}
                             <input type="text"
                                 placeholder='Your Name'
                                 name='name'
