@@ -1,14 +1,15 @@
 import React, { useRef, useState } from 'react'
 import './contact.css'
 import { AiOutlineFacebook, AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
 
 
 export const Contact = () => {
     const form = useRef()
-    const [resut, setresut] = useState('')
-
+    // const [resut, setresut] = useState('')
+    // const notify = () => toast("Wow so easy!");
     const sentEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm('service_joixy47', 'template_lizzjdj', form.current, 'lsN6VBHxPzFNhYkam')
@@ -16,10 +17,15 @@ export const Contact = () => {
                 console.log('SUCCESS!', response.status, response.text);
             }, (err) => {
                 console.log('FAILED...', err);
-            });
-        e.target.reset()
-    }
+            })
 
+
+
+        e.target.reset()
+        toast.success(' Send message success ', {
+            position: toast.POSITION.TOP_RIGHT
+        });
+    }
     return (
         <div id='contact'>
 
@@ -47,8 +53,9 @@ export const Contact = () => {
                             </a>
                         </div>
                     </div>
-                    <div className='col-lg-8'>
 
+                    <div className='col-lg-8'>
+                        <ToastContainer />
                         <form action='' ref={form} onSubmit={sentEmail}>
                             <input type="text"
                                 placeholder='Your Name'
@@ -62,7 +69,11 @@ export const Contact = () => {
                                 name='message'
                                 placeholder='message'
                                 required />
-                            <button className=' btn-contact' type='submit'>Sumit</button>
+                            <button
+                                onClick={sentEmail}
+                                className=' btn-contact' type='submit'
+                                disabled={sentEmail}
+                            >Sumit</button>
                         </form>
                     </div>
                 </div>
