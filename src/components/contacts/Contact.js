@@ -27,7 +27,7 @@ export const Contact = () => {
         // });
     }
     return (
-        <div id='contact'>
+        <div id='contact' className='contact mt-5'>
 
             <h1 className='text-center'>Contact Me</h1>
             <div className='container contact__container'>
