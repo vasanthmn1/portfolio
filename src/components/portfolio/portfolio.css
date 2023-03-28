@@ -2,19 +2,48 @@
     background-color: aqua !important;
 }
 .portfolio__card{
+    width: 350px;
+position: relative;
+    
     background-color: var(--color-bg) !important;
 }
 .portfolio__btns{
     margin-top: 20px;
 }
 .portfolio__img{
+    height: 180px;
+    width: 100%;
     padding: 8px 8px;
     border-radius:15px !important;
 }
+.click_btn{
+    display: flex;
+    margin-top: 20px;
+    /* width: 200px; */
+    /* justify-content: center; */
+}
 
+.frontend_btn{
+    background-color: rgb(255, 255, 255);
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: all 0.9s ease;
+}
+.frontend_btn:hover,.backend_btn:hover{
+    background-color:#0D6EFD ;
+    color: #fff;
+}
+.backend_btn{
+    margin-left: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: all 0.9s ease;
+}
 .githup__btn{
     padding: 10px 10px;
 border: 1px solid #00337C;
+cursor: pointer;
 border-radius: 5px;
    color: #fff;
    font-size: 1.2rem;
