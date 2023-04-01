@@ -9,17 +9,6 @@ import './portfolio.css'
 export const Portfolio = () => {
 
     const [open, setopen] = useState(false)
-
-    // const githupref = useRef()
-    // const btnref = useRef()
-
-
-    // window.addEventListener('click', (e) => {
-    //     if (e.target !== githupref.current && e.target !== btnref.current) {
-    //         setopen(false)
-    //     }
-    // })
-
     const data = [
         {
             id: "1",
@@ -40,12 +29,14 @@ export const Portfolio = () => {
             title: "U videos",
             gitupUrl: [
                 {
-                    frontend: ""
+                    frontend: "https://media.giphy.com/media/Lp9sOuNZdmlIw7ZVE0/giphy.gif"
                 },
                 {
-                    backend: ""
-                }
+                    backend: "https://media.giphy.com/media/Lp9sOuNZdmlIw7ZVE0/giphy.gif"
+                },
+
             ],
+            websiteUrl: "https://media.giphy.com/media/Lp9sOuNZdmlIw7ZVE0/giphy.gif",
             img: projet2
         },
     ]
