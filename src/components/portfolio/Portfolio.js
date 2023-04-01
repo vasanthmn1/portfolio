@@ -1,87 +1,109 @@
-import React, { useRef, useState } from 'react'
-import img from '../../assate/bg.jpg'
-import projet1 from '../../assate/money.png'
-import projet2 from '../../assate/uvideo.jpg'
+import React, { useState } from 'react';
+import projet1 from '../../assate/money.png';
+import projet2 from '../../assate/uvideo.jpg';
+import './portfolio.css';
 
-
-
-import './portfolio.css'
 export const Portfolio = () => {
+    const [open, setOpen] = useState('');
 
-    const [open, setopen] = useState(false)
     const data = [
         {
-            id: "1",
-            title: "Money mangement app",
+            id: '1',
+            title: 'Money management app',
             gitupUrl: [
                 {
-                    frontend: "https://github.com/vasanthmn1/capstone-project-client"
+                    frontend: 'https://github.com/vasanthmn1/capstone-project-client',
                 },
                 {
-                    backend: "https://github.com/vasanthmn1/capstone-project-backend"
-                }
+                    backend: 'https://github.com/vasanthmn1/capstone-project-backend',
+                },
             ],
-            websiteUrl: "https://admirable-pudding-b31006.netlify.app/",
+            websiteUrl: 'https://admirable-pudding-b31006.netlify.app/',
             img: projet1,
         },
         {
-            id: "2",
-            title: "U videos",
+            id: '2',
+            title: 'U videos',
             gitupUrl: [
                 {
-                    frontend: "https://media.giphy.com/media/Lp9sOuNZdmlIw7ZVE0/giphy.gif"
+                    frontend: 'https://media.giphy.com/media/Lp9sOuNZdmlIw7ZVE0/giphy.gif',
                 },
                 {
-                    backend: "https://media.giphy.com/media/Lp9sOuNZdmlIw7ZVE0/giphy.gif"
+                    backend: 'https://media.giphy.com/media/Lp9sOuNZdmlIw7ZVE0/giphy.gif',
                 },
-
             ],
-            websiteUrl: "https://media.giphy.com/media/Lp9sOuNZdmlIw7ZVE0/giphy.gif",
-            img: projet2
+            websiteUrl: 'https://media.giphy.com/media/Lp9sOuNZdmlIw7ZVE0/giphy.gif',
+            img: projet2,
         },
-    ]
+    ];
 
-
-
-
+    const handleClick = (idx) => {
+        setOpen(open === idx ? '' : idx);
+    };
 
     return (
-        <div id='portfolio' className='container pb-5'>
-            <div className='row'>'
-                <h1 className='mt-4 mb-4 text-center' ><span>P</span>rojets</h1>
+        <div id="portfolio" className="container pb-5">
+            <div className="row">
+                <h1 className="mt-4 mb-4 text-center">
+                    <span>P</span>rojets
+                </h1>
 
-                {
-                    data.map((val, idx) => {
-                        return (
-                            <div className='col-lg-4 col-md-6 mb-5 d-flex justify-content-center align-items-center' key={idx}>
-                                <div className="card portfolio__card ">
-                                    <img src={val.img} className="card-img-top portfolio__img" alt="img" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">{val.title}</h5>
-                                        <div className='portfolio__btns'>
-                                            {/* {console.log(val.gitupUrl)} */}
-                                            <a target='_blank' className='githup__btn' onClick={() => setopen(!open)}>Githup</a>
-
-                                            <a href={val.websiteUrl} target='_blank' className='website__btn'>Website</a>
-                                        </div>
-
-                                        {
-                                            open &&
-                                            (
-                                                <div className='click_btn' onClick={() => setopen(false)}>
-                                                    <a className='frontend_btn' rel="noreferrer" target='_blank' href={val.gitupUrl[0].frontend}>Frontend </a>
-                                                    <a className='backend_btn' rel="noreferrer" target='_blank' href={val.gitupUrl[1].backend}>backend</a>
-                                                </div>
-                                            )
-                                        }
-
-                                    </div>
+                {data.map((val, idx) => (
+                    <div
+                        className="col-lg-4 col-md-6 mb-5 d-flex justify-content-center align-items-center"
+                        key={idx}
+                    >
+                        <div className="card portfolio__card">
+                            <img
+                                src={val.img}
+                                className="card-img-top portfolio__img"
+                                alt="img"
+                            />
+                            <div className="card-body">
+                                <h5 className="card-title">{val.title}</h5>
+                                <div className="portfolio__btns">
+                                    <button
+                                        className="githup__btn"
+                                        onClick={() => handleClick(idx)}
+                                    >
+                                        Github
+                                    </button>
+                                    <a
+                                        href={val.websiteUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="website__btn"
+                                    >
+                                        Website
+                                    </a>
                                 </div>
+                                {open === idx && (
+                                    <div className="click_btn">
+                                        <a
+                                            className="frontend_btn"
+                                            href={val.gitupUrl[0].frontend}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Frontend
+                                        </a>
+                                        <a
+                                            className="backend_btn"
+                                            href={val.gitupUrl[1].backend}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Backend
+                                        </a>
+                                    </div>
+                                )}
                             </div>
-                        )
-                    })
-                }
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
-    )
-}
+    );
+};
+
+// export default Portfolio;
