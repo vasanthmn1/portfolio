@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import projet1 from '../../assate/money.png';
-import projet2 from '../../assate/uvideo.jpg';
+import projet2 from '../../assate/interior.jpg';
 import './portfolio.css';
 
 export const Portfolio = () => {
@@ -23,22 +23,25 @@ export const Portfolio = () => {
         },
         {
             id: '2',
-            title: 'U videos',
+            title: 'Interior',
             gitupUrl: [
                 {
-                    frontend: 'https://media.giphy.com/media/Lp9sOuNZdmlIw7ZVE0/giphy.gif',
+                    frontend: 'https://github.com/vasanthmn1/interior-frontendapp',
                 },
                 {
-                    backend: 'https://media.giphy.com/media/Lp9sOuNZdmlIw7ZVE0/giphy.gif',
+                    backend: 'https://github.com/vasanthmn1/interior-bakend',
                 },
             ],
-            websiteUrl: 'https://media.giphy.com/media/Lp9sOuNZdmlIw7ZVE0/giphy.gif',
+            websiteUrl: 'https://master--chic-pithivier-376c30.netlify.app/',
             img: projet2,
         },
     ];
 
     const handleClick = (idx) => {
         setOpen(open === idx ? '' : idx);
+        console.log(open);
+        console.log("idx" + idx);
+
     };
 
     return (
@@ -54,11 +57,13 @@ export const Portfolio = () => {
                         key={idx}
                     >
                         <div className="card portfolio__card">
-                            <img
-                                src={val.img}
-                                className="card-img-top portfolio__img"
-                                alt="img"
-                            />
+                            <div className='img__box'>
+                                <img
+                                    src={val.img}
+                                    className="card-img-top portfolio__img"
+                                    alt="img"
+                                />
+                            </div>
                             <div className="card-body">
                                 <h5 className="card-title">{val.title}</h5>
                                 <div className="portfolio__btns">

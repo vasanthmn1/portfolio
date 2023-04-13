@@ -2,7 +2,8 @@
     background-color: aqua !important;
 }
 .portfolio__card{
-    width: 350px;
+    /* width: 350px; */
+
 position: relative;
     
     background-color: var(--color-bg) !important;
@@ -10,8 +11,11 @@ position: relative;
 .portfolio__btns{
     margin-top: 20px;
 }
+.img__box{
+    height: 300px;
+}
 .portfolio__img{
-    height: 180px;
+    /* height: 180px; */
     width: 100%;
     padding: 8px 8px;
     border-radius:15px !important;
@@ -19,8 +23,6 @@ position: relative;
 .click_btn{
     display: flex;
     margin-top: 20px;
-    /* width: 200px; */
-    /* justify-content: center; */
 }
 
 .frontend_btn{
