@@ -2,7 +2,6 @@
     background-color: aqua !important;
 }
 .portfolio__card{
-    /* width: 350px; */
 
 position: relative;
     
@@ -15,7 +14,7 @@ position: relative;
     height: 300px;
 }
 .portfolio__img{
-    /* height: 180px; */
+
     width: 100%;
     padding: 8px 8px;
     border-radius:15px !important;

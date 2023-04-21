@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import projet1 from '../../assate/money.png';
 import projet2 from '../../assate/interior.jpg';
+import projet3 from '../../assate/blog.jpg';
+
 import './portfolio.css';
 
 export const Portfolio = () => {
@@ -34,6 +36,20 @@ export const Portfolio = () => {
             ],
             websiteUrl: 'https://master--chic-pithivier-376c30.netlify.app/',
             img: projet2,
+        },
+        {
+            id: '2',
+            title: 'Blog',
+            gitupUrl: [
+                {
+                    frontend: 'https://github.com/vasanthmn1/blog-frontend',
+                },
+                {
+                    backend: 'https://github.com/vasanthmn1/backend-blog',
+                },
+            ],
+            websiteUrl: 'https://spontaneous-mooncake-060ef3.netlify.app/',
+            img: projet3,
         },
     ];
 
