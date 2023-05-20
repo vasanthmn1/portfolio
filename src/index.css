@@ -21,17 +21,15 @@ body{
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif !important;
   background: url('./assate/bg.jpg');
+  background:  url(assate/bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff !important;
-  /* background-image: ; */
 }
 section{
   height: 100vh;
-   /* margin-top: 8rem; */
 }
 a{
   text-decoration: none !important;
-
 }

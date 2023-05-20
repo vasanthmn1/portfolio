@@ -10,6 +10,7 @@ import { TopContainer } from './components/topcontainer/TopContainer';
 function App() {
   return (
     <div className="App">
+
       <TopContainer />
 
       <Nav />
@@ -17,6 +18,7 @@ function App() {
       <Portfolio />
       <Contact />
       <Footer />
+
     </div>
   );
 }
