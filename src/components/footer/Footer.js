@@ -17,7 +17,7 @@ export const Footer = () => {
             </a>
             <a
                 title='Email'
-                href='https://wa.me/919003259352' className='footer_icons' target={'_blank'}>
+                href='mailto:mnvasanthcode@gmail.com' className='footer_icons' target={'_blank'}>
                 <AiOutlineMail />
             </a>
             <a
@@ -25,6 +25,7 @@ export const Footer = () => {
                 href='https://wa.me/919003259352' className='footer_icons' target={'_blank'}>
                 <AiOutlineWhatsApp />
             </a>
+
         </div>
     )
 }

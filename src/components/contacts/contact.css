@@ -1,38 +1,4 @@
-/* .container.contact__container {
-    width: 58%;
-    display: grid;
-    grid-template-columns: 30% 50%;
-    gap: 12%;
-   }
-   .contact__options{
-   display: flex;
-   flex-direction: column;
-   gap: 1.2rem;
-   }
-   .contact__option{
-       background: var(--color-bg-variant);
-       padding: 1.2rem;
-       border-radius: 1.2rem;
-       text-align: center;
-       border: 1px solid transparent;
-       transition:all 0.5s ease ;
-   }
-   .contact__option:hover{
-       background: transparent;
-       border-color: var(--color-primary-variant);
-   }
-   .contact__option a{
-       margin-top: 0.7rem;
-       display: inline-block;
-       font-size: 0.7rem;
-   }
-   .contact_icon{
-       font-size: 1.5rem;
-       margin-bottom: 0.5rem;
-   } */
-   
-   /*  Form */
-   
+
    
    form{
        display: flex;
@@ -78,7 +44,6 @@
     justify-content: center;
     background-color: var(--color-bg);
     margin-top: 0.7rem;
-    /* display: inline-block; */
     font-size: 0.7rem;
     margin-bottom: 20px;
    }
@@ -96,25 +61,6 @@
     font-size:2rem ;
    }
 
-   /* .toast-message {
-    background: rgb(255, 0, 0);
-    color: #fff;
-    font-size: 20px;
-    width: 34vw;
-    padding: 30px 20px;
-} */
-
-.fixed{
-  /* position: fixed; */
-  /* margin-top: 60px; */
-}
-/* @media screen and (min-width:1400px){
-    .topContainer__container{
-        height: 100vh !important;
-    }
-    
-   
-   } */
 
  @media screen and (max-width:985px){
     .fixed{

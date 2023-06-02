@@ -1,0 +1,50 @@
+.githupconatiner{
+    background-color: rgba(3, 201, 135, 0.674);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0px 80px 0px;
+}
+.githupconatiner h4{
+    margin-bottom: 30px;
+}
+.githup_warper{
+    background-color: rgb(17, 17, 18);
+    padding: 40px 60px;
+    border-radius: 5px;
+}
+/* .react-activity-calendar__calendar {
+    width: 100% !important;
+    /* min-width: 100% !important; */
+
+    @media screen and (max-width:985px){
+        .githup_warper{
+          
+           overflow-x: scroll;
+        }
+        .githupconatiner{
+           
+            /* width: 100%; */
+            display: block;
+        
+        }
+        .githupconatiner h4{
+            text-align: center;
+        }
+        .githup_warper::-webkit-scrollbar{
+            width: 0.5rem;
+            height: 0.5rem;
+        }
+        
+        .githup_warper::-webkit-scrollbar-thumb{
+            border-radius: .5rem;
+            background-color: #ffffffc8;
+            visibility: hidden;
+        }
+        
+        .githup_warper:hover::-webkit-scrollbar-thumb{ 
+            visibility: visible;
+        }
+       }
