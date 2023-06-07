@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import projet1 from '../../assate/money.png';
 import projet2 from '../../assate/interior.jpg';
 import projet3 from '../../assate/blog.jpg';
+import projet4 from '../../assate/astrology.jpg';
+
 
 import './portfolio.css';
 
@@ -36,9 +38,15 @@ export const Portfolio = () => {
             ],
             websiteUrl: 'https://master--chic-pithivier-376c30.netlify.app/',
             img: projet2,
+            optiontitle: "Admin",
+            admilEmail: "Eamil: admin@gmail.com",
+            admilpassword: "Password:  admin1234",
+            optionpath: "Adminpath:  ...../admin",
+            optioncode: "Code:  1122",
+
         },
         {
-            id: '2',
+            id: '3',
             title: 'Blog',
             gitupUrl: [
                 {
@@ -50,6 +58,26 @@ export const Portfolio = () => {
             ],
             websiteUrl: 'https://spontaneous-mooncake-060ef3.netlify.app/',
             img: projet3,
+        },
+        {
+            id: '4',
+            title: 'Astrology',
+            gitupUrl: [
+                {
+                    frontend: 'https://github.com/vasanthmn1/frontend-astrology',
+                },
+                {
+                    backend: 'https://github.com/vasanthmn1/backend-astrology',
+                },
+            ],
+            websiteUrl: 'https://celebrated-moonbeam-21c681.netlify.app/',
+            img: projet4,
+            optiontitle: "Admin",
+
+
+            admilEmail: "Eamil: admin@gmail.com",
+            admilpassword: "Password:  admin1234"
+
         },
     ];
 
@@ -83,6 +111,22 @@ export const Portfolio = () => {
                             <div className="card-body">
                                 <h5 className="card-title">{val.title}</h5>
                                 <div className="portfolio__btns">
+                                    <div>
+                                        {
+                                            val.optiontitle &&
+                                            <select className='select' >
+                                                <option >{val.optiontitle}</option>
+                                                {val.optionpath && <option >{val.optionpath}</option>}
+
+                                                <option >{val.admilEmail}</option>
+                                                <option>  {val.admilpassword}</option>
+                                                {val.optioncode && <option >{val.optioncode}</option>}
+
+
+                                            </select>
+                                        }
+
+                                    </div>
                                     <button
                                         className="githup__btn"
                                         onClick={() => handleClick(idx)}
