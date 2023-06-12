@@ -24,6 +24,9 @@ export const Portfolio = () => {
             ],
             websiteUrl: 'https://admirable-pudding-b31006.netlify.app/',
             img: projet1,
+            optiontitle: "User",
+            admilEmail: "Eamil: 1@gmail.com",
+            admilpassword: "Password: 1@gmail.com"
         },
         {
             id: '2',
@@ -58,6 +61,9 @@ export const Portfolio = () => {
             ],
             websiteUrl: 'https://spontaneous-mooncake-060ef3.netlify.app/',
             img: projet3,
+            optiontitle: "User",
+            admilEmail: "Eamil: 1@gmail.com",
+            admilpassword: "Password: 1@gmail.com"
         },
         {
             id: '4',
