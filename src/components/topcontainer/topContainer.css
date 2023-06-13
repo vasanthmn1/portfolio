@@ -58,10 +58,12 @@ color: var(--color-bg);
 
 .image img{
   /* background-position: top; */
+  -webkit-animation: morph 7s ease-in-out infinite;
+  animation: morph 7s ease-in-out infinite;
   border-radius: 2rem;
   width: 100%;
   border: 0.4rem solid #fff;
-  -webkit-animation: morph 7s ease-in-out infinite;
+
 }
 
 .Vib{
