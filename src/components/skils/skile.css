@@ -1,3 +1,8 @@
+.skill__container{
+height: 100vh ;
+}
+
+
 .progress {
 	background-color: #d8d8d8;
 	border-radius: 20px;
@@ -72,17 +77,20 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 	  }
 	}
 
-	@media screen and (max-width:988px){
+	@media screen and (max-width:990px){
 		.contatan_box {
 			display: flex ;
 			align-items: center ;
 			justify-content: center ;
 		}
+		.skill__container{
+			height: 100% ;
+			}
 	   }
 
-	   @media screen and (min-width:1400px){
+	   @media screen and (min-width:1566px){
 		.skill__container{
-			height: 100vh !important;
+			height:100%;
 			
 		}
 	   }

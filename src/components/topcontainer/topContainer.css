@@ -1,6 +1,6 @@
 .topContainer__container{
  padding-top: 100px ;
-/* height: auto; */
+height: 100vh;
 margin-bottom: 100px;
 }
 
@@ -37,7 +37,7 @@ color: var(--color-bg);
 }
 
 .cv__btn:hover{
-    box-shadow: 5px 1px 21px -2px rgba(3, 201, 136, 0.67);
+    box-shadow: 5px 1px 21px -2px  var(--color-bg);
     background-color: #fff;
 color: var(--color-bg);
 }
@@ -52,83 +52,53 @@ color: var(--color-bg);
     width:100% !important;
     background-color: var(--color-bg);
     padding: 5px 5px;
-    /* -webkit-animation: vibrate-1 0.3s linear infinite both;
-	        animation: vibrate-1 0.3s linear infinite both; */
+    -webkit-animation: morph 7s ease-in-out infinite;
+    animation: morph 7s ease-in-out infinite;
 }
+
+.image img{
+  /* background-position: top; */
+  border-radius: 2rem;
+  width: 100%;
+  border: 0.4rem solid #fff;
+  -webkit-animation: morph 7s ease-in-out infinite;
+}
+
 .Vib{
     z-index: 5;
     box-shadow: 5px 1px 21px -2px rgb(242, 242, 242);
     background-color: red;
-    
-    position: absolute;
-    top: 100px;
+    position:sticky ;
+    top: 200px;
     padding: 5px 20px;
     font-size: 1.3rem;
     left: -60px;
     border-radius: 10px;
-    /* width: 450px;
-    height:400px; */
-    -webkit-animation: vibrate-1 0.3s linear infinite both;
-    animation: vibrate-1 0.3s linear infinite both;
+    animation: shake 0.5s;
+width: fit-content;
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
 }
-@-webkit-keyframes vibrate-1 {
-    0% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-    20% {
-      -webkit-transform: translate(-2px, 2px);
-              transform: translate(-2px, 2px);
-    }
-    40% {
-      -webkit-transform: translate(-2px, -2px);
-              transform: translate(-2px, -2px);
-    }
-    60% {
-      -webkit-transform: translate(2px, 2px);
-              transform: translate(2px, 2px);
-    }
-    80% {
-      -webkit-transform: translate(2px, -2px);
-              transform: translate(2px, -2px);
-    }
-    100% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-  }
-  @keyframes vibrate-1 {
-    0% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-    20% {
-      -webkit-transform: translate(-2px, 2px);
-              transform: translate(-2px, 2px);
-    }
-    40% {
-      -webkit-transform: translate(-2px, -2px);
-              transform: translate(-2px, -2px);
-    }
-    60% {
-      -webkit-transform: translate(2px, 2px);
-              transform: translate(2px, 2px);
-    }
-    80% {
-      -webkit-transform: translate(2px, -2px);
-              transform: translate(2px, -2px);
-    }
-    100% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-  }
 
-.image img{
-    /* background-position: top; */
-    border-radius: 2rem;
-    width: 100%;
+
+/*  */
+@keyframes morph{
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
 }
+50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+}
+100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+}
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
 
 .social__icons{
 font-size: 3rem;
@@ -149,13 +119,21 @@ color: #0A66C2;
     color: #fff;
 }
 
-@media screen and (min-width:1400px){
+@media screen and (min-width:1966px){
     .topContainer__container{
-        height: 100vh !important;
+        height: 100%;
+    }
+    
+
+   }
+
+   @media screen and (max-width:989px){
+    .topContainer__container{
+        height: 100%;
     }
     
    
-   }
+    }
 
  @media screen and (max-width:995px){
     .Vib{

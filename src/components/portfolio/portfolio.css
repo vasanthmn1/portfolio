@@ -42,7 +42,7 @@ position: relative;
     transition: all 0.9s ease;
 }
 .githup__btn{
-    padding: 10px 10px;
+    padding: 9px 10px;
 border: 1px solid #00337C;
 cursor: pointer;
 border-radius: 5px;
@@ -66,7 +66,6 @@ border-radius: 5px;
     background-color:#0D6EFD ;
    border-radius: 6px ;
     transition: all 0.9s ease;
-    /* transform: scale(1) !important; */
 }
 
 .website__btn:hover{
@@ -75,9 +74,17 @@ border-radius: 5px;
     background-color: #fff;
 }
 .select{
-    background-color: rgb(255, 255, 255);
+    background: #047455;
+    background: -webkit-linear-gradient(0deg, #047455 0%, #1cff68 100%);
+    background: linear-gradient(0deg, #047455 0%, #1cff68 100%);
     border-radius: 5px;
-    width: 100%;
+    width: 100px;
     padding: 5px;
     margin: 5px;
+    color: #fff;
+    
+}
+
+.select option{
+    background: #047455;
 }

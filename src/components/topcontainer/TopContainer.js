@@ -17,7 +17,6 @@ export const TopContainer = () => {
                     <SocialMedia />
                 </div>
                 <div className='col-lg-5 '>
-
                     <div className='image'>
                         <div className='Vib'>Developer</div>
                         <img src={profile} alt='profile' />

@@ -117,22 +117,7 @@ export const Portfolio = () => {
                             <div className="card-body">
                                 <h5 className="card-title">{val.title}</h5>
                                 <div className="portfolio__btns">
-                                    <div>
-                                        {
-                                            val.optiontitle &&
-                                            <select className='select' >
-                                                <option >{val.optiontitle}</option>
-                                                {val.optionpath && <option >{val.optionpath}</option>}
 
-                                                <option >{val.admilEmail}</option>
-                                                <option>  {val.admilpassword}</option>
-                                                {val.optioncode && <option >{val.optioncode}</option>}
-
-
-                                            </select>
-                                        }
-
-                                    </div>
                                     <button
                                         className="githup__btn"
                                         onClick={() => handleClick(idx)}
@@ -147,6 +132,21 @@ export const Portfolio = () => {
                                     >
                                         Website
                                     </a>
+
+                                    {
+                                        val.optiontitle &&
+                                        <select className='select'  >
+                                            <option >{val.optiontitle}</option>
+                                            {val.optionpath && <option >{val.optionpath}</option>}
+
+                                            <option >{val.admilEmail}</option>
+                                            <option>  {val.admilpassword}</option>
+                                            {val.optioncode && <option >{val.optioncode}</option>}
+
+
+                                        </select>
+                                    }
+
                                 </div>
                                 {open === idx && (
                                     <div className="click_btn">
