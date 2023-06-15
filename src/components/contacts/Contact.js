@@ -73,11 +73,12 @@ export const Contact = () => {
                                 placeholder='message'
                                 required />
                             <button
+
                                 // onClick={sentEmail}
                                 className=' btn-contact' type='submit'
                                 onclick={() => {
                                 }}
-                            >Sumit</button>
+                            >submit</button>
                         </form>
                     </div>
                 </div>
