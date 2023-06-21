@@ -70,7 +70,7 @@ export const Portfolio = () => {
         },
         {
             id: '5',
-            title: 'miniChat',
+            title: 'Astrology',
             gitupUrl: [
                 {
                     frontend: 'https://github.com/vasanthmn1/frontend-astrology',
