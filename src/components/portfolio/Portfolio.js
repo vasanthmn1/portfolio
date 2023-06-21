@@ -3,6 +3,9 @@ import projet1 from '../../assate/money.png';
 import projet2 from '../../assate/interior.jpg';
 import projet3 from '../../assate/blog.jpg';
 import projet4 from '../../assate/astrology.jpg';
+import projet5 from '../../assate/chat.jpg';
+import projet6 from '../../assate/gunshop.jpg';
+
 
 
 import './portfolio.css';
@@ -66,8 +69,8 @@ export const Portfolio = () => {
             admilpassword: "Password: 1@gmail.com"
         },
         {
-            id: '4',
-            title: 'Astrology',
+            id: '5',
+            title: 'miniChat',
             gitupUrl: [
                 {
                     frontend: 'https://github.com/vasanthmn1/frontend-astrology',
@@ -81,6 +84,43 @@ export const Portfolio = () => {
             optiontitle: "Admin",
 
 
+            admilEmail: "Eamil: admin@gmail.com",
+            admilpassword: "Password:  admin1234"
+
+        },
+
+        {
+            id: '4',
+            title: 'Mini Chat',
+            gitupUrl: [
+                {
+                    frontend: 'https://github.com/vasanthmn1/minichat-frontend',
+                },
+                {
+                    backend: 'https://github.com/vasanthmn1/minichat-backend',
+                },
+            ],
+            websiteUrl: 'https://clever-chaja-38768f.netlify.app/',
+            img: projet5,
+            // optiontitle: "Admin",
+
+
+            // admilEmail: "Eamil: admin@gmail.com",
+            // admilpassword: "Password:  admin1234"
+        },
+        {
+            id: '6',
+            title: 'OnGuns',
+            gitupUrl: [
+                {
+                    frontend: 'https://github.com/vasanthmn1/frontend-gunshop',
+                },
+                {
+                    backend: 'https://github.com/vasanthmn1/backend-gunshop-stripe',
+                },
+            ],
+            websiteUrl: 'https://magical-melba-799351.netlify.app/',
+            img: projet6,
             admilEmail: "Eamil: admin@gmail.com",
             admilpassword: "Password:  admin1234"
 
