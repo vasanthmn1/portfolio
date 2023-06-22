@@ -4,43 +4,29 @@ import { useState } from 'react'
 import './nav.css'
 import { AiOutlineHome, AiOutlineUser, AiFillFile } from 'react-icons/ai'
 import { BiBook, BiMessage } from 'react-icons/bi'
-
+import { Link } from 'react-scroll';
 
 
 export const Nav = () => {
     const [active, setactive] = useState('')
     return (
         <nav>
-            <a href='#'
+            <Link
+                activeClass="active" to="banner" spy={true} smooth={true} offset={-100} duration={100}  >
+                <AiOutlineHome />
 
-                onClick={() => {
-                    setactive('#')
-                }}
+            </Link>
 
-                className={active === '#' ? 'active' : ""}><AiOutlineHome /></a>
+            <Link
+                activeClass="active" to="skin" spy={true} smooth={true} offset={-100} duration={100}
+            ><BiBook /></Link>
+            <Link
+                activeClass="active" to="portfolio" spy={true} smooth={true} offset={-100} duration={100}
+            ><AiFillFile /></Link>
+            <Link
+                activeClass="active" to="contact" spy={true} smooth={true} offset={-500} duration={100}
 
-            <a href='#skin'
-                className={active === '#skin' ? 'active' : ""}
-                onClick={() => {
-                    setactive('#skin')
-                }}><BiBook /></a>
-
-
-            <a href='#portfolio'
-                className={active === '#portfolio' ? 'active' : ""}
-                onClick={() => {
-                    setactive('#portfolio')
-                }}><AiFillFile /></a>
-
-
-
-            <a className={active === '#contact' ? 'active' : ""}
-                onClick={() => {
-                    setactive('#contact')
-                }}
-
-                href='#contact'><AiOutlineUser /></a>
-
+            ><AiOutlineUser /></Link>
         </nav>
     )
 }

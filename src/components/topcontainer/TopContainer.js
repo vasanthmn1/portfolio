@@ -5,7 +5,7 @@ import profile from '../../assate/profile.jpg'
 import { SocialMedia } from './SocialMedia'
 export const TopContainer = () => {
     return (
-        <div className='topContainer__container container'>
+        <div className='topContainer__container container' id='banner'>
             <div className=' row '>
                 <div className='col-lg-7 mt-lg-5  mt-sm-1  mb-sm-5  '>
                     <div>
