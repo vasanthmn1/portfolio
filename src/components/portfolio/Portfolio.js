@@ -138,7 +138,7 @@ export const Portfolio = () => {
         <div id="portfolio" className="container pb-5">
             <div className="row">
                 <h1 className="mt-4 mb-4 text-center">
-                    <span>P</span>rojets
+                    <span>P</span>rojects
                 </h1>
 
                 {data.map((val, idx) => (
