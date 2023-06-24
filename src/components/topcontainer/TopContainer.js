@@ -1,7 +1,7 @@
 import React from 'react'
 import { CTA } from './CTA'
 import './topContainer.css'
-import profile from '../../assate/profile.jpg'
+import profile from '../../assate/profile2.jpg'
 import { SocialMedia } from './SocialMedia'
 export const TopContainer = () => {
     return (
