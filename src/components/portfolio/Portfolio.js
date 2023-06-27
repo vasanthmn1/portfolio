@@ -184,6 +184,26 @@ export const Portfolio = () => {
                                         Website
                                     </a>
                                 </div>
+                                {open === idx && (
+                                    <div className="click_btn">
+                                        <a
+                                            className="frontend_btn"
+                                            href={val.gitupUrl[0].frontend}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Frontend
+                                        </a>
+                                        <a
+                                            className="backend_btn"
+                                            href={val.gitupUrl[1].backend}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Backend
+                                        </a>
+                                    </div>
+                                )}
                                 <div>
                                     {val.optiontitle && (
                                         <div className="select" defaultValue={"Credentials"}>
@@ -292,26 +312,7 @@ export const Portfolio = () => {
                                         </div>
                                     )}</div>
 
-                                {open === idx && (
-                                    <div className="click_btn">
-                                        <a
-                                            className="frontend_btn"
-                                            href={val.gitupUrl[0].frontend}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Frontend
-                                        </a>
-                                        <a
-                                            className="backend_btn"
-                                            href={val.gitupUrl[1].backend}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Backend
-                                        </a>
-                                    </div>
-                                )}
+
                             </div>
                         </div>
                     </div>
