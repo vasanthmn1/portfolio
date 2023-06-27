@@ -5,13 +5,14 @@ import projet3 from '../../assate/blog.jpg';
 import projet4 from '../../assate/astrology.jpg';
 import projet5 from '../../assate/chat.jpg';
 import projet6 from '../../assate/gunshop.jpg';
-
-
-
 import './portfolio.css';
-
+import { useCopyToClipboard } from 'react-use';
+import { FaCopy } from 'react-icons/fa'
+import { Toaster, toast } from 'react-hot-toast';
 export const Portfolio = () => {
     const [open, setOpen] = useState('');
+    const [text, setText] = useState('');
+    const [state, copyToClipboard] = useCopyToClipboard();
 
     const data = [
         {
@@ -28,8 +29,8 @@ export const Portfolio = () => {
             websiteUrl: 'https://admirable-pudding-b31006.netlify.app/',
             img: projet1,
             optiontitle: "User",
-            admilEmail: "Eamil: 1@gmail.com",
-            admilpassword: "Password: 1@gmail.com"
+            admilEmail: " 1@gmail.com",
+            admilpassword: " 1@gmail.com"
         },
         {
             id: '2',
@@ -45,10 +46,10 @@ export const Portfolio = () => {
             websiteUrl: 'https://master--chic-pithivier-376c30.netlify.app/',
             img: projet2,
             optiontitle: "Admin",
-            admilEmail: "Eamil: admin@gmail.com",
-            admilpassword: "Password:  admin1234",
-            optionpath: "Adminpath:  ...../admin",
-            optioncode: "Code:  1122",
+            admilEmail: "admin@gmail.com",
+            admilpassword: " admin1234",
+            optionpath: "...../admin",
+            optioncode: "1122",
 
         },
         {
@@ -65,11 +66,11 @@ export const Portfolio = () => {
             websiteUrl: 'https://spontaneous-mooncake-060ef3.netlify.app/',
             img: projet3,
             optiontitle: "User",
-            admilEmail: "Eamil: 1@gmail.com",
-            admilpassword: "Password: 1@gmail.com"
+            admilEmail: " 1@gmail.com",
+            admilpassword: " 1@gmail.com"
         },
         {
-            id: '5',
+            id: '4',
             title: 'Astrology',
             gitupUrl: [
                 {
@@ -82,15 +83,14 @@ export const Portfolio = () => {
             websiteUrl: 'https://celebrated-moonbeam-21c681.netlify.app/',
             img: projet4,
             optiontitle: "Admin",
-
-
-            admilEmail: "Eamil: admin@gmail.com",
-            admilpassword: "Password:  admin1234"
-
+            admilEmail: "admin@gmail.com",
+            admilpassword: " admin1234",
+            optiontitle2: "User",
+            userEmail: "1@gmail.com",
+            userpassword: "1@gmail.com"
         },
-
         {
-            id: '4',
+            id: '5',
             title: 'Mini Chat',
             gitupUrl: [
                 {
@@ -121,21 +121,32 @@ export const Portfolio = () => {
             ],
             websiteUrl: 'https://magical-melba-799351.netlify.app/',
             img: projet6,
-            admilEmail: "Eamil: admin@gmail.com",
-            admilpassword: "Password:  admin1234"
+            admilEmail: "admin@gmail.com",
+            admilpassword: " admin1234"
 
         },
     ];
-
+    // let texts = "Copy this";
     const handleClick = (idx) => {
         setOpen(open === idx ? '' : idx);
         console.log(open);
         console.log("idx" + idx);
-
+        setText(`${data[idx].admilEmail}`);
+        // \n${data[idx].admilpassword}
+        // setText(`${data[idx].admilEmail}\n${data[idx].admilpassword}`);
     };
+    // console.log(text);
 
+
+    // const handleCopyText = (text) => {
+    //     copyToClipboard(text);
+    //     setText('')
+    // };
     return (
         <div id="portfolio" className="container pb-5">
+            <div>ssasa
+
+            </div>
             <div className="row">
                 <h1 className="mt-4 mb-4 text-center">
                     <span>P</span>rojects
@@ -146,7 +157,7 @@ export const Portfolio = () => {
                         className="col-lg-4 col-md-6 mb-5 d-flex justify-content-center align-items-center"
                         key={idx}
                     >
-                        <div className="card portfolio__card">
+                        <div className=" portfolio__card">
                             <div className='img__box'>
                                 <img
                                     src={val.img}
@@ -172,22 +183,115 @@ export const Portfolio = () => {
                                     >
                                         Website
                                     </a>
-
-                                    {
-                                        val.optiontitle &&
-                                        <select className='select'  >
-                                            <option >{val.optiontitle}</option>
-                                            {val.optionpath && <option >{val.optionpath}</option>}
-
-                                            <option >{val.admilEmail}</option>
-                                            <option>  {val.admilpassword}</option>
-                                            {val.optioncode && <option >{val.optioncode}</option>}
-
-
-                                        </select>
-                                    }
-
                                 </div>
+                                <div>
+                                    {val.optiontitle && (
+                                        <div className="select" defaultValue={"Credentials"}>
+                                            {"Credentials"}
+                                            <Toaster
+                                                position="bottom-center"
+                                                reverseOrder={false}
+                                            />
+                                            <div className="select__dropdown">
+
+                                                <div className="select__option">{val.optiontitle}</div>
+                                                {val.optionpath && <div className="select__option">{val.optionpath}</div>}
+                                                <div className="select__option" >
+                                                    Eamil:  {val.admilEmail}
+                                                    <span className="copybtn" onClick={() => {
+                                                        copyToClipboard(val.admilEmail)
+                                                        toast(`Copy ${val.admilEmail}`, {
+                                                            icon: `💚 `,
+                                                            style: {
+                                                                height: "50px",
+
+                                                            },
+                                                        });
+                                                    }}>
+                                                        <FaCopy />
+                                                    </span>
+                                                </div>
+                                                <div className="select__option">
+                                                    Password:  {val.admilpassword}
+                                                    <span className="copybtn"
+
+
+                                                        onClick={() => {
+                                                            copyToClipboard(val.admilpassword)
+                                                            toast(`Copy ${val.admilpassword}`, {
+                                                                icon: `💚 `,
+                                                                style: {
+                                                                    height: "50px",
+                                                                    // borderRadius: '10px',
+                                                                    // background: 'red',
+                                                                    // color: '#fff',
+                                                                },
+                                                            });
+                                                        }}>
+                                                        <FaCopy />
+                                                    </span>
+                                                </div>
+
+                                                {val.optiontitle2 &&
+                                                    <>
+                                                        <div className="select__option">
+                                                            {val.optiontitle2}</div>
+                                                        <div className="select__option" >
+                                                            Eamil:  {val.userEmail}
+                                                            <span className="copybtn" onClick={() => {
+                                                                copyToClipboard(val.userEmail)
+                                                                toast(`Copy ${val.userEmail}`, {
+                                                                    icon: `💚 `,
+                                                                    style: {
+                                                                        height: "50px",
+
+                                                                    },
+                                                                });
+                                                            }}>
+                                                                <FaCopy />
+                                                            </span>
+                                                        </div>
+                                                        <div className="select__option">
+                                                            Password:  {val.userpassword}
+                                                            <span className="copybtn"
+
+
+                                                                onClick={() => {
+                                                                    copyToClipboard(val.userpassword)
+                                                                    toast(`Copy ${val.userpassword}`, {
+                                                                        icon: `💚 `,
+                                                                        style: {
+                                                                            height: "50px",
+
+                                                                        },
+                                                                    });
+                                                                }}>
+                                                                <FaCopy />
+                                                            </span>
+                                                        </div>
+                                                    </>}
+                                                {val.optioncode && <div className="select__option">
+
+                                                    <span className="copybtn" onClick={() => {
+                                                        copyToClipboard(val.optioncode)
+                                                        toast(`Copy ${val.optioncode}`, {
+                                                            icon: `💚 `,
+                                                            style: {
+                                                                height: "50px",
+
+                                                            },
+
+                                                        });
+                                                    }}>
+                                                        <FaCopy title='Copy' />
+                                                    </span>
+                                                    {val.optioncode}</div>}
+
+                                            </div>
+
+                                        </div>
+                                    )}</div>
+
                                 {open === idx && (
                                     <div className="click_btn">
                                         <a
@@ -218,3 +322,25 @@ export const Portfolio = () => {
 };
 
 // export default Portfolio;
+
+{/* {
+                                        val.optiontitle &&
+                                        <select className='select'  >
+                                            <option >{val.optiontitle}</option>
+                                            {val.optionpath && <option >{val.optionpath}</option>}
+                                            {/* && <button> <FaCopyright /></button> */}
+{/* <span className='copybtn'>
+                                        <FaRegCopyright />
+                                    </span>
+                                    <option > <FaRegCopyright className='copybtn' />  {val.admilEmail}   <span className='copybtn'>
+                                        <FaRegCopyright />
+                                    </span> </option>
+                                    <option>  {val.admilpassword}</option>
+                                    {val.admilpassword && <option >    <span className='copybtn'>
+                                        <FaRegCopyright />
+                                    </span></option>}
+                                    {val.optioncode && <option >{val.optioncode}</option>} */}
+
+
+{/* </select>
+                                    } */}
