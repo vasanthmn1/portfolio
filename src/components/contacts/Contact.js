@@ -1,38 +1,33 @@
 import React, { useRef, useState } from 'react'
 import './contact.css'
 import { AiOutlineFacebook, AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai'
-import { ToastContainer, toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-hot-toast';
 
 
 
 export const Contact = () => {
     const form = useRef()
 
+
     const sentEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm('service_joixy47', 'template_lizzjdj', form.current, 'lsN6VBHxPzFNhYkam')
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
+                toast.success('Message Send SuccessFull ✅')
             }, (err) => {
                 console.log('FAILED...', err);
             })
-
-
-
         e.target.reset()
-        // toast.success(' Send message success ', {
-        //     position: toast.POSITION.TOP_RIGHT
-        // });
+
     }
     return (
         <div id='contact' className='contact mt-5'>
-
             <h1 className='text-center'>Contact Me</h1>
             <div className='container contact__container'>
-
-
                 <div className='row'>
                     <div className='col-lg-4'>
                         <div className='contact__options'>

@@ -1,4 +1,5 @@
 
+import { Toaster } from 'react-hot-toast';
 import './App.css';
 import { Contact } from './components/contacts/Contact';
 import { Footer } from './components/footer/Footer';
@@ -11,7 +12,10 @@ import { TopContainer } from './components/topcontainer/TopContainer';
 function App() {
   return (
     <div className="App">
-
+      <Toaster
+        position="bottom-center"
+        reverseOrder={false}
+      />
       <TopContainer />
       <Nav />
       <Skils />

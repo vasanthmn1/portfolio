@@ -11,7 +11,6 @@ import { FaCopy } from 'react-icons/fa'
 import { Toaster, toast } from 'react-hot-toast';
 export const Portfolio = () => {
     const [open, setOpen] = useState('');
-    const [text, setText] = useState('');
     const [state, copyToClipboard] = useCopyToClipboard();
 
     const data = [
@@ -129,19 +128,10 @@ export const Portfolio = () => {
     // let texts = "Copy this";
     const handleClick = (idx) => {
         setOpen(open === idx ? '' : idx);
-        console.log(open);
-        console.log("idx" + idx);
-        setText(`${data[idx].admilEmail}`);
-        // \n${data[idx].admilpassword}
-        // setText(`${data[idx].admilEmail}\n${data[idx].admilpassword}`);
+
+
     };
-    // console.log(text);
 
-
-    // const handleCopyText = (text) => {
-    //     copyToClipboard(text);
-    //     setText('')
-    // };
     return (
         <div id="portfolio" className="container pb-5">
             <div>ssasa
@@ -208,10 +198,7 @@ export const Portfolio = () => {
                                     {val.optiontitle && (
                                         <div className="select" defaultValue={"Credentials"}>
                                             {"Credentials"}
-                                            <Toaster
-                                                position="bottom-center"
-                                                reverseOrder={false}
-                                            />
+
                                             <div className="select__dropdown">
 
                                                 <div className="select__option">{val.optiontitle}</div>
