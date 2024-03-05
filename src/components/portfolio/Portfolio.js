@@ -150,6 +150,7 @@ export const Portfolio = () => {
                         <div className=" portfolio__card">
                             <div className='img__box'>
                                 <img
+                 loading="lazy"
                                     src={val.img}
                                     className="card-img-top portfolio__img"
                                     alt="img"
