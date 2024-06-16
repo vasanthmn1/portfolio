@@ -19,7 +19,7 @@ export const Portfolio = () => {
 
     return (
         <div id="portfolio" className="container pb-5">
-            <div>ssasa
+            <div>
 
             </div>
             <div className="row">
